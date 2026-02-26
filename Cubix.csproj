@@ -2,25 +2,27 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
+    <!-- Change to net8.0-windows to allow Windows Forms -->
+    <TargetFramework>net8.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <RootNamespace>Cubix</RootNamespace>
+    
+    <!-- This enables System.Windows.Forms for the window handle -->
+    <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Use Windows Forms just for the Window Handle (HWND) -->
-    <UseWindowsForms>true</UseWindowsForms>
-  </ItemGroup>
-
-  <ItemGroup>
-    <!-- Vortice provides the low-level DirectX bindings -->
     <PackageReference Include="Vortice.Direct3D11" Version="3.5.0" />
     <PackageReference Include="Vortice.DXGI" Version="3.5.0" />
     <PackageReference Include="Vortice.XAudio2" Version="3.5.0" />
     <PackageReference Include="Vortice.XInput" Version="3.5.0" />
-    <PackageReference Include="Vortice.Mathematics" Version="1.7.6" />
-  </ItemGroup>
+    <PackageReference Include="Vortice.Mathematics" Version="1.7.8" />
+    
+    <!-- Новые зависимости -->
+    <PackageReference Include="Vortice.D3DCompiler" Version="3.5.0" />
+    <PackageReference Include="StbImageSharp" Version="2.30.15" />
+</ItemGroup>
 
 </Project>
