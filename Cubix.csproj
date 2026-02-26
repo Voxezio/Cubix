@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <RootNamespace>Cubix</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Use Windows Forms just for the Window Handle (HWND) -->
+    <UseWindowsForms>true</UseWindowsForms>
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Vortice provides the low-level DirectX bindings -->
+    <PackageReference Include="Vortice.Direct3D11" Version="3.5.0" />
+    <PackageReference Include="Vortice.DXGI" Version="3.5.0" />
+    <PackageReference Include="Vortice.XAudio2" Version="3.5.0" />
+    <PackageReference Include="Vortice.XInput" Version="3.5.0" />
+    <PackageReference Include="Vortice.Mathematics" Version="1.7.6" />
+  </ItemGroup>
+
+</Project>
